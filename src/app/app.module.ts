@@ -11,6 +11,9 @@ import { NavbarinicioComponent } from './components/navbarinicio/navbarinicio.co
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbaradminComponent } from './components/navbaradmin/navbaradmin.component';
+import { InstructoresComponent } from './components/instructores/instructores.component';
+import { ClassComponent } from './components/class/class.component';
 
 
 @NgModule({
@@ -24,6 +27,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
+    NavbaradminComponent,
+    InstructoresComponent,
+    ClassComponent,
  
   ],
   imports: [
