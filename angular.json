@@ -1,11 +1,18 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "bd41ac7f-4876-45db-bcd5-cacb3b050ed6"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "GYM": {
+    "qr-reader": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,12 +20,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gym",
+            "outputPath": "dist/qr-reader",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -43,6 +48,12 @@
                   "maximumError": "4kb"
                 }
               ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "outputHashing": "all"
             },
             "development": {
@@ -60,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "GYM:build:production"
+              "browserTarget": "qr-reader:build:production"
             },
             "development": {
-              "browserTarget": "GYM:build:development"
+              "browserTarget": "qr-reader:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,17 +82,16 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "GYM:build"
+            "browserTarget": "qr-reader:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -95,7 +105,5 @@
       }
     }
   },
-  "cli": {
-    "analytics": "a5e6920b-f2c2-4c46-aa00-e5be0e9bfbd8"
-  }
+  "defaultProject": "qr-reader"
 }

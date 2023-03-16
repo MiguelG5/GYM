@@ -11,7 +11,9 @@ describe('NavbaradminComponent', () => {
       declarations: [ NavbaradminComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(NavbaradminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

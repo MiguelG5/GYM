@@ -1,6 +1,13 @@
 <app-navbaradmin></app-navbaradmin>
 <div>
     <h1>Instructores</h1>
+        <!--Boton Agregar couch -->
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <button type="button" class="btn  btn-dark" data-bs-toggle="modal" data-bs-target="#AgregarCouch">
+            Agregar
+          </button>
+        </div>
+        <br>
         <br>
           <div class="row row-cols-1 row-cols-md-4 g-0">
             <div class="col">
@@ -8,6 +15,10 @@
                 <img src="../../../assets/UserIns.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Name</h5>
+                      <p>Edad: __________</p>
+                      <p>Correo: __________</p>
+                      <p>Telefono: __________</p>
+                      <p>Especialidad: __________</p>
                   <!-- Button trigger modal -->
 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Modificar">
   Modificar
@@ -26,9 +37,8 @@
         <p>Edad: <input type="text"></p>
         <p>Correo: <input type="text"></p>
         <p>Telefono: <input type="text"></p>
-        <p> Especialidad: <select name="especialidad">
-        <option>Yoga</option>
-       <option>Pilates</option></select></p>
+        <p>Especialidad: <input type="text"></p>
+        <p>Imagen: <input type="text"></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-danger">Eliminar</button>
@@ -45,6 +55,10 @@
                   <img src="../../../assets/UserIns.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Name</h5>
+                    <p>Edad: __________</p>
+                      <p>Correo: __________</p>
+                      <p>Telefono: __________</p>
+                      <p>Especialidad: __________</p>
                     <!-- Button trigger modal -->
   <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Modificar">
     Modificar
@@ -57,6 +71,10 @@
                   <img src="../../../assets/UserIns.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Name</h5>
+                    <p>Edad: __________</p>
+                      <p>Correo: __________</p>
+                      <p>Telefono: __________</p>
+                      <p>Especialidad: __________</p>
                     <!-- Button trigger modal -->
   <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Modificar">
     Modificar
@@ -69,6 +87,10 @@
                   <img src="../../../assets/UserIns.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Name</h5>
+                    <p>Edad: __________</p>
+                      <p>Correo: __________</p>
+                      <p>Telefono: __________</p>
+                      <p>Especialidad: __________</p>
                     <!-- Button trigger modal -->
   <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Modificar">
     Modificar
@@ -76,21 +98,13 @@
                   </div>
                 </div>
               </div>
-
-<!--Boton Agregar couch -->
-
-            <div class="Btn-Agregar">
-              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#AgregarCouch">
-                Agregar
-              </button>
-            </div>
               
               <!-- Modal -->
               <div class="modal fade" id="AgregarCouch" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-2" id="staticBackdropLabel">Agregar</h1>
+                      <h1 class="modal-title fs-2" id="staticBackdropLabel">Agregar Instructor</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -98,9 +112,8 @@
                       <p>Edad: <input type="text"></p>
                       <p>Correo: <input type="text"></p>
                       <p>Telefono: <input type="text"></p>
-                      <p> Especialidad: <select name="especialidad">
-                      <option>Yoga</option>
-                     <option>Pilates</option></select></p>
+                      <p>Especialidad: <input type="text"></p>
+                      <p>Imagen: <input type="text"></p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-outline-success">Agregar</button>
@@ -109,6 +122,10 @@
                 </div>
               </div>
 
-            
+              
 </div>
-
+<br>
+<br>
+<br>
+<br>
+<app-footer></app-footer>
